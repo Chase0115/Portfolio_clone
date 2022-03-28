@@ -9,7 +9,7 @@
     --color-dark-grey: #4d4d4d;
     --color-grey: #616161;
     --color-light-grey: #7c7979;
-    --color-homecolor: #cdf7f7;
+    --color-homecolor: #99dcd7;
     --color-light-green: #45deb0;
     --color-dark-blue: #054585;
     --color-yellow: #fff7d1;
@@ -79,8 +79,15 @@ ul {
 
 a {
     text-decoration: none;
-    color: var(--color-orange);
+    color: var(--color-dark-blue);
     font-size: 32px;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: none;
+    outline: none;
 }
 
 /* Navbar */
@@ -89,7 +96,7 @@ a {
     justify-content: space-between;
     background-color: var(--color-homecolor);
     align-items: center;
-    color: var(--color-orange);
+    color: var(--color-dark-blue);
     padding: 16px;
 }
 
@@ -125,3 +132,30 @@ a {
 .navbar__menu__item:hover {
     background-color: var(--color-light-green);
 }
+
+/* Home */
+#home {
+    background: url("images/background.png") center/cover no-repeat;
+    padding: 40px;
+    text-align: center;
+}
+
+.home__avatar {
+    border-radius: 50%;
+    border: 2px solid var(--color-dark-blue);
+}
+
+.home__title, .home__desc {
+    color: var(--color-dark-blue);
+}
+
+.home__contact {
+    color: var(--color-dark-blue);
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-dark-blue);
+    border-radius: 4px;
+}
+
