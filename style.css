@@ -12,6 +12,7 @@
   --color-homecolor: #99dcd7;
   --color-light-green: #45deb0;
   --color-dark-blue: #054585;
+  --color-light-purple: #DDDDFF;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
@@ -95,10 +96,13 @@ button {
 .section {
   padding: 50px;
   text-align: center;
-  max-width: 1200px;
   margin: auto;
 }
 
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+}
 
 /* Navbar */
 #navbar {
@@ -168,8 +172,6 @@ button {
 }
 
 /* About */
-#about {
-}
 
 .about__stacks {
   padding: 30px;
@@ -228,4 +230,63 @@ button {
 
 .job__period {
   font-size: font var(--font-micro);
+}
+
+/* Skills */
+#skills {
+  background-color: var(--color-light-purple);
+}
+
+.skillset {
+  display: flex;
+  margin: 20px 0px;
+  justify-content: center;
+  color: var(--color-white);
+  background-color: var(--color-light-grey);
+}
+
+.skillset__title {
+  color: var(--color-white);
+  margin: 0px;
+  padding: 20px 0px;
+}
+
+
+.skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+
+.skill {
+  margin: 25px 0px;
+
+}
+
+.skill__desc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skillset__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-light-grey);
+}
+
+.skillset__value {
+  background-color: var(--color-yellow);
+  height: 3px;
+  background-color: var(--color-orange);
+}
+.skillset__right{
+  flex-basis: 40%;
+}
+
+.tools {
+  background-color: var(--color-grey);
+}
+
+.tools, .etc {
+  padding: 20px 0px;
 }
