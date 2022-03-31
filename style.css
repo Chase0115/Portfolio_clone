@@ -405,6 +405,7 @@ button {
 .testimonial {
   display: flex;
   margin: 32px 0px;
+  justify-content: center;
 }
 
 .testimonial__img {
