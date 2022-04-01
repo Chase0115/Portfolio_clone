@@ -124,6 +124,8 @@ button {
 
 #navbar.navbar--dark {
   background-color: var(--color-homecolor);
+  padding: 10px;
+  
 }
 
 .navbar__logo {
