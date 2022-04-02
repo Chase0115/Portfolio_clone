@@ -125,8 +125,9 @@ button {
 #navbar.navbar--dark {
   background-color: var(--color-homecolor);
   padding: 10px;
-  
+  z-index: 999999;
 }
+
 
 .navbar__logo {
   font-size: var(--font-medium);
@@ -415,7 +416,7 @@ button {
 }
 
 /* Testimonials */
-#testimonials {
+#testimonial {
   background-color: var(--color-light-white);
 }
 
