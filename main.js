@@ -1,14 +1,21 @@
 "use strict";
 
 // Make navbar transparent when it is on the top
+// Click Arrow up btn to home
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
+const arrowbtn = document.querySelector(".arrowup-btn")
 
 document.addEventListener("scroll", () => {
   if (window.scrollY > navbarHeight) {
     navbar.classList.add("navbar--dark");
+    arrowbtn.classList.add("arrow--dark");
+    arrowbtn.addEventListener("click", () => {
+      scrollIntoView("#home")
+    });
   } else {
     navbar.classList.remove("navbar--dark");
+    arrowbtn.classList.remove("arrow--dark");
   }
 });
 
@@ -37,6 +44,9 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
   home.style.opacity = 1-window.scrollY/homeHeight;
 });
+
+
+
 
 
 function scrollIntoView(selector) {
