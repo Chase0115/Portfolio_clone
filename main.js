@@ -45,7 +45,31 @@ document.addEventListener("scroll", () => {
   home.style.opacity = 1-window.scrollY/homeHeight;
 });
 
+// Handle work filtering button
+const workBtnContainer = document.querySelector('.work__categories')
+const projectContainer = document.querySelector('.work__projects')
+const projects = document.querySelectorAll('.project')
 
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.category || e.target.parentNode.dataset.category;
+  
+  if(filter == null) {
+    return;
+  }
+  
+  projectContainer.classList.add('anim-out');
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if(filter === '*' || filter === project.dataset.category) {
+      project.classList.remove('invisible');
+      }
+      else {
+        project.classList.add('invisible')
+      }
+    });
+    projectContainer.classList.remove('anim-out')
+  }, 250);
+});
 
 
 
