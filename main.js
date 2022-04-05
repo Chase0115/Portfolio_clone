@@ -21,13 +21,20 @@ document.addEventListener("scroll", () => {
 
 //  Handle scrolling when click on the navbar menu
 const navbarMenu = document.querySelector(".navbar__menu");
-navbarMenu.addEventListener("click", (event) => {
+navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
   const link = target.dataset.link;
   if (link == null) {
     return;
   }
+  navbarMenu.classList.add('close');
   scrollIntoView(link);
+});
+
+// Handle Navbar toggle button
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('close');
 });
 
 // Click contact me btn to move to bottom
@@ -56,6 +63,13 @@ workBtnContainer.addEventListener('click', (e) => {
   if(filter == null) {
     return;
   }
+
+  // Remove selection from previous then select the new one
+  const active = document.querySelector('.category__btn.selected')
+  if (active != null) {
+    active.classList.remove('selected');
+  }
+  e.target.classList.add('selected');
   
   projectContainer.classList.add('anim-out');
   setTimeout(() => {
@@ -71,13 +85,8 @@ workBtnContainer.addEventListener('click', (e) => {
   }, 250);
 });
 
-// Remove selection from previous then select the new one
-const active = document.querySelector('.category__btn.selected')
-active.classList.remove('selected');
-const target =
-  e.target.nodeName = 'Button' ? e.target :
-  e.target.parentNode;
-target.classList.add('selected');
+
+
 
 
 function scrollIntoView(selector) {

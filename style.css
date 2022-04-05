@@ -135,8 +135,6 @@ button {
 
 .navbar__menu {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
 }
 .navbar__menu__item {
   padding: 8px 12px;
@@ -527,19 +525,32 @@ button {
 /* For below 768px screen width */
 
 @media screen and (max-width: 768px) {
+  .section__container {
+    width: 100%;
+  }
+
   .navbar__toggle-btn {
-    flex-direction: column;
     display: block;
   }
+
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-homecolor);
+  }
+
+  #navbar.navbar--dark {
+    padding: 16px;
   }
 
   .navbar__menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
+    display: block;
+  }
+
+  .navbar__menu.close {
     display: none;
   }
 
@@ -548,7 +559,7 @@ button {
     bottom: 20px;
   }
   .about__stacks {
-    display: inline-block;
+    flex-direction: column;
   }
 
   .stack {
