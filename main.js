@@ -71,6 +71,13 @@ workBtnContainer.addEventListener('click', (e) => {
   }, 250);
 });
 
+// Remove selection from previous then select the new one
+const active = document.querySelector('.category__btn.selected')
+active.classList.remove('selected');
+const target =
+  e.target.nodeName = 'Button' ? e.target :
+  e.target.parentNode;
+target.classList.add('selected');
 
 
 function scrollIntoView(selector) {
