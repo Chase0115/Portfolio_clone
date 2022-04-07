@@ -37,6 +37,7 @@ navbarToggleBtn.addEventListener('click', () => {
   navbarMenu.classList.toggle('close');
 });
 
+
 // Click contact me btn to move to bottom
 const contactMe = document.querySelector(".home__contact");
 contactMe.addEventListener("click", () => {
@@ -85,11 +86,11 @@ workBtnContainer.addEventListener('click', (e) => {
   }, 250);
 });
 
-
-
-
-
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({behavior: "smooth"});
 };
+
+// Sync section and Navbar menu when scrolling
+
+

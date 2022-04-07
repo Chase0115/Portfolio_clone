@@ -116,7 +116,7 @@ button {
   background-color: transparent;
   align-items: center;
   color: var(--color-dark-blue);
-  padding: 16px;
+  padding: 0px;
   position: fixed;
   width: 100%;
   transition: all var(--animation-duration) ease-in-out;
@@ -154,6 +154,10 @@ button {
   border: 1px solid var(--color-white);
   border-radius: var(--size-border-radius);
   background-color: var(--color-light-green);
+}
+
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
 }
 
 .navbar__toggle-btn {
@@ -353,10 +357,6 @@ button {
 
 .work__categories {
   margin: 40px;
-}
-
-.section__container {
-  width: 1000px;
 }
 
 .category__btn.selected,
